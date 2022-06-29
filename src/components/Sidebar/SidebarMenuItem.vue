@@ -1,8 +1,8 @@
 <template>
-    <div class="sidebar-menu-item" :class="{'sidebar-menu-item--active': isActive}">
+    <router-link  :to="route" class="sidebar-menu-item" :class="{'sidebar-menu-item--active': isActive}">
         <slot name="prefixIcon"></slot>
         <div class="sidebar-menu-item__title" >{{title}}</div>
-    </div>
+    </router-link>
 </template>
 
 <script lang="ts" setup>
@@ -12,9 +12,9 @@ const props = defineProps({
     isActive: {
         default: false,
         type: Boolean
-    }
+    },
+    route: String
 })
-
 </script>
 
 <style>
@@ -37,6 +37,7 @@ const props = defineProps({
 
 .sidebar-menu-item__title{
     margin-left: 19px;
+      color:white;
 }
 
 </style>

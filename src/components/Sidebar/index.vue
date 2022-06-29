@@ -5,17 +5,17 @@
                 <Logo></Logo>
             </div>
             <div class="sidebar__menu">
-                <SidebarMenuItem :isActive="true" title="Журнал заявок">
+                <SidebarMenuItem route="/" :isActive="route.path == '/'" title="Журнал заявок">
                     <template v-slot:prefixIcon>
                         <ApplicationsIcon></ApplicationsIcon>
                     </template>
                 </SidebarMenuItem>
-                <SidebarMenuItem title="Банки">
+                <SidebarMenuItem :isActive="route.path == '/banks/'" route="/banks/" title="Банки">
                     <template v-slot:prefixIcon>
                         <BankIcon></BankIcon>
                     </template>
                 </SidebarMenuItem>
-                <SidebarMenuItem title="Отчёты">
+                <SidebarMenuItem :isActive="route.path == '/reports/'" route="/reports/" title="Отчёты">
                     <template v-slot:prefixIcon>
                         <ReportsIcon></ReportsIcon>
                     </template>
@@ -36,6 +36,8 @@ import ApplicationsIcon from "../icons/ApplicationsIcon.vue";
 import BankIcon from "../icons/BankIcon.vue";
 import ReportsIcon from "../icons/ReportsIcon.vue";
 import ExitButton from "./ExitButton.vue";
+import { useRoute } from "vue-router";
+const route = useRoute();
 </script>
 
 <style>

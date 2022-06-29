@@ -18,33 +18,14 @@ const userName = ref<string>('');
                 </svg>
             </div>
         </div>
-        <a-input class="base-input"  v-model:value="userName" placeholder="Искать">
+        <a-input class="base-input" style="min-width:400px"  v-model:value="userName" placeholder="Введите номер заявки или ИИН...">
             <template #prefix>
-                <search-outlined type="user" />
+                <search-outlined type="user" color="#7F7F7F"/>
             </template>
-            
         </a-input>
     </header>
 </template>
 <style>
-.page-header {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.page-header-title {
-    display: flex;
-    align-items: center;
-}
-
-
-.page-header-title>h1 {
-    font-size: 30px;
-    font-weight: 500;
-    margin: 0px;
-}
-
 .page-icon {
     margin-left: 30px;
     display: flex;
