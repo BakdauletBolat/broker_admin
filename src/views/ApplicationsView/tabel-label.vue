@@ -30,7 +30,8 @@ defineProps(['status']);
 <style>
 
 .table-label{
-    padding: 6px 20px;
+    padding: 6px 30px;
+    display: block;
     text-align: center;
     border-radius: 5px;
     font-weight: 500;

@@ -28,7 +28,7 @@ body {
 .container-page {
     width: 100%;
     max-width: 1050px;
-    margin: 0 auto;
+    margin-left: 30px;
     padding: 0px 20px;
     color: black;
     height: 100vh;
@@ -54,6 +54,12 @@ body {
     height: 45px !important;
     border: 1px solid transparent !important;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ant-select-arrow {
+        width: auto;
+    height: auto;
+    margin-top: -12px!important;
 }
 
 .ant-select-selection-item {
@@ -85,4 +91,74 @@ body {
     font-size: 30px;
     font-weight: 500;
     margin: 0px;
+}
+
+
+
+/* Scrollbar */
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+
+
+
+  /* Collapse */
+
+
+.collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.collapse-header-title {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #001529;
+    margin-left: 10px;
+}
+
+.collapse-header-message {
+    padding: 6px 20px;
+    color: #2A9534;
+    background: #E0FFE3;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.collapse-header-message--error{
+    color: rgba(219, 10, 10, 1);
+    background: #FFE8E8;
+}
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow {
+    vertical-align: -8px !important;
+}
+
+.ant-collapse-ghost>.ant-collapse-item {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    margin: 16px 0px;
 }

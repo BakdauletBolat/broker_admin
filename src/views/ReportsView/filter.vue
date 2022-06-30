@@ -1,14 +1,7 @@
 <template>
-<div class="applications__filter-grid">  
-
-     <a-range-picker class="base-picker" v-model:value="dateValue"  />
-    
-     <a-select class="base-select" placeholder="Канал продажи" v-model:value="sale_channel_value" :options="sale_channel_options" @change="handleChange">
-        <template #suffixIcon>
-            <sale-channel-icon color="#7F7F7F"></sale-channel-icon>
-        </template>
-    </a-select>
-    <a-select class="base-select" placeholder="Город" v-model:value="city_value" :options="city_options" @change="handleChange">
+<div class="applications__filter-grid">   
+     <a-range-picker  class="base-picker" v-model:value="dateValue"  />
+    <a-select class="base-select" placeholder="Банк" v-model:value="bank_value" :options="banks_options" @change="handleChange">
         <template #suffixIcon>
             <city-icon color="#7F7F7F"></city-icon>
         </template>
@@ -26,64 +19,38 @@
 import type { SelectProps } from 'ant-design-vue';
 import { ref } from 'vue';
 import type { Dayjs } from 'dayjs';
-import SaleChannelIcon from '../../components/icons/SaleChannelIcon.vue';
 import CityIcon from '../../components/icons/CityIcon.vue';
 import StatusIcon from '../../components/icons/StatusIcon.vue';
-
-
 type RangeValue = [Dayjs, Dayjs];
 const handleChange = (value: string) => {
     console.log(`selected ${value}`);
 };
 const dateValue = ref<RangeValue>();
-const sale_channel_value = ref(undefined);
-const sale_channel_options = ref<SelectProps['options']>([
+
+const bank_value = ref(undefined);
+const banks_options = ref<SelectProps['options']>([
     {
-        value: 'Online store',
-        label: 'Online store'
+        value: 'Altyn Bank',
+        label: 'Altyn Bank',
     },
     {
-        value: 'Offline store',
-        label: 'Offline store'
+        value: 'Halyk Bank',
+        label: 'Halyk Bank',
+    },
+    {
+        value: 'Jysan Bank',
+        label: 'Jysan Bank',
+        disabled: true,
+    },
+    {
+        value: 'Eurasian Bank',
+        label: 'Eurasian Bank',
+    },
+    {
+        value: 'Freedom finance',
+        label: 'Freedom finance',
     },
 ]);
-
-const city_value = ref(undefined);
-const city_options = ref<SelectProps['options']>([
-    {
-        value: 'Алматы',
-        label: 'Алматы',
-    },
-    {
-        value: 'Астана',
-        label: 'Астана',
-    },
-    {
-        value: 'Караганда',
-        label: 'Караганда',
-    },
-    {
-        value: 'Каскелен',
-        label: 'Каскелен',
-    },
-    {
-        value: 'Тараз',
-        label: 'Тараз',
-    },
-    {
-        value: 'Туркестан',
-        label: 'Туркестан',
-    },
-    {
-        value: 'Шу',
-        label: 'Шу',
-    },
-    {
-        value: 'Шымкент',
-        label: 'Шымкент',
-    },
-]);
-
 
 const status_value = ref<SelectProps['options']>(undefined);
 const status_options = ([
