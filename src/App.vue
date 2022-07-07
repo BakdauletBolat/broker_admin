@@ -4,7 +4,6 @@ import Sidebar from "./components/Sidebar/index.vue";
 import ruRu from 'ant-design-vue/es/locale/ru_RU';
 import dayjs from 'dayjs';
 import 'dayjs/locale/ru';
-
 dayjs.locale('ru');
 </script>
 

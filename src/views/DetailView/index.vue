@@ -104,18 +104,24 @@ import DetailProcessingTab from "./detail-processing-tab.vue";
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
-  margin-top: 40px;
+  padding-top: 40px;
+  margin-bottom: 40px;
 }
 
 .detail__info,
 .detail__processing {
+  position: sticky;
+  top:20px;
   padding: 20px;
   border-radius: 10px;
   background-color: white;
 }
-
 .detail__processing{
-  height: 900px;
+  padding-top: 0px;
+}
+.detail__processing,.detail__info{
+  align-self: flex-start;
+  height: min-content;
 }
 
 .detail__info-title {

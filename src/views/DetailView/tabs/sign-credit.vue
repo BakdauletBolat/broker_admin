@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import CollapseHeader from './collapse-header.vue';
-import HalykBank from '../../../components/icons/HalykBank.vue';
-import AltynBankIcon from '../../../components/icons/AltynBankIcon.vue';
 import EurasianBankIcon from '../../../components/icons/EurasianBankIcon.vue';
 const text = `A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.`;
 const activeKey = ref(['1']);
@@ -19,7 +17,9 @@ const activeKey = ref(['1']);
                         <EurasianBankIcon></EurasianBankIcon>
                     </template>
                     <template #rightExtra>
-                        25 417 ₸ х 36 мес.
+                        <div class="sign__title">
+                            25 417 ₸ х 36 мес.
+                        </div>
                     </template>
                 </CollapseHeader>
             </template>
@@ -33,5 +33,8 @@ const activeKey = ref(['1']);
     line-height: 20px;
     margin-top: 26px;
     margin-bottom: 16px;
+}
+.sign__title{
+    color:black;
 }
 </style>

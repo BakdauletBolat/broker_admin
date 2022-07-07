@@ -19,7 +19,9 @@ const activeKey = ref(['1']);
                         <EurasianBankIcon></EurasianBankIcon>
                     </template>
                     <template #rightExtra>
-                        25 417 ₸ х 36 мес.
+                        <div class="client_choise_title">
+                            25 417 ₸ х 36 мес.
+                        </div>
                     </template>
                 </CollapseHeader>
             </template>
@@ -33,5 +35,8 @@ const activeKey = ref(['1']);
     line-height: 20px;
     margin-top: 26px;
     margin-bottom: 16px;
+}
+.client_choise_title{
+    color:black;
 }
 </style>

@@ -22,6 +22,9 @@ defineProps(['title','showArrow'])
 .collapse-header-arrow{
     width: 90%!important;
 }
+.collapse-header-title{
+    color: black;
+}
 .ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow{
         position: absolute;
     top: 50%;

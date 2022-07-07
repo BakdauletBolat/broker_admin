@@ -30,5 +30,16 @@ const userName = ref<string>('');
     margin-left: 30px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+     transition: 0.2s ease;
+      transform: rotateZ(0) scale(1);
+}
+.page-icon:hover {
+    transition: 0.2s ease;
+    transform: rotateZ(45deg);
+}
+.page-icon:active {
+    transition: 0.2s ease;
+    transform: rotateZ(45deg) scale(1.05);
 }
 </style>

@@ -161,10 +161,7 @@ const current = ref(6);
 
   padding:16px 0px;
 }
-/* 
-.applications__table-tbody {
-   overflow: scroll;
-} */
+
 .applications__table-tbody > tr > td {
   border-top: 0.5px solid #F0F0F0;
   padding: 22px 0px;
